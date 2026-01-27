@@ -1,0 +1,43 @@
+# --- Build & Temp Files (IGNORE) ---
+build/
+bin/
+out/
+cmake-build-debug/
+x64/
+Debug/
+Release/
+*.exe
+*.dll
+*.so
+*.a
+*.swp
+*~
+*.bak
+*.tmp
+.vscode/
+
+# --- Documentation Ignored by Default ---
+# Ignore raw LaTeX files source if not needed (optional, keeping clean repo)
+docs/*.tex
+docs/*.aux
+docs/*.log
+docs/*.toc
+
+# --- WHITELIST (INCLUDE THESE) ---
+# Ensure these are tracked even if they match above rules
+
+# 1. Source Code & Build Config
+!src/
+!CMakeLists.txt
+
+# 2. Specific Documentation Files
+!README.md
+!arhitectura_bsp.txt
+!documentation_rise.pdf
+!rise.pptx
+!SAM-*.pdf
+
+# 3. Keep the docs folder structure if needed
+!docs/
+!docs/presentation.tex
+!docs/chapters/

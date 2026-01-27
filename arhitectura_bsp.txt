@@ -1,0 +1,17 @@
+[ Application Layer (main.cpp) ]
+           |
+           v
+[ BSP Interface (gpio.h) ] <--- Abstractizare
+           |
+           +--------------------------------+
+           | (Combinație selectată la Build)|
+           v                                v
+ [ Backend MOCK (PC) ]      [ Backend TARGET (ATSAMV71) ]
+           |                                |
+  +-----------------+              +-----------------+
+  | std::cout logs  |              | Registers (MMIO)|
+  | Simulare Stare  |              | Hardware Real   |
+  +-----------------+              +-----------------+
+           |                                |
+           v                                v
+    [ Terminal / PC ]                [ Pini Fizici ]
