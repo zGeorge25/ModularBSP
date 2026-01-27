@@ -31,13 +31,13 @@ cd build
 
 # 1. Configurare pentru Simulare PC (MOCK) - Default
 cmake -DBSP_BACKEND=MOCK ..
-# Sau specific pentru MinGW pe Windows:
-cmake -G "MinGW Makefiles" -DBSP_BACKEND=MOCK ..
+# Sau specificand generatorul dorit:
+cmake -G "<GENERATOR>" -DBSP_BACKEND=MOCK ..
 
 # 2. Configurare pentru Hardware Real (TARGET - ATSAMV71)
 cmake -DBSP_BACKEND=TARGET ..
-# Sau specific pentru MinGW pe Windows:
-cmake -G "MinGW Makefiles" -DBSP_BACKEND=TARGET ..
+# Sau cu generator specific:
+cmake -G "<GENERATOR>" -DBSP_BACKEND=TARGET ..
 
 # 3. Compilare
 cmake --build .
